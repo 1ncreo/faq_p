@@ -89,9 +89,19 @@ CACHES = {
         'LOCATION': 'redis://127.0.0.1:6379/1',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        }
+            'PARSER_CLASS': 'redis.connection._HiredisParser',  # Note the underscore
+            'CONNECTION_POOL_CLASS': 'redis.connection.BlockingConnectionPool',
+            'CONNECTION_POOL_CLASS_KWARGS': {
+                'max_connections': 50,
+                'timeout': 20,
+            }
+        },
+        'KEY_PREFIX': 'faq',
     }
 }
+
+# Cache time to live is 1 hour
+CACHE_TTL = 60 * 60
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
