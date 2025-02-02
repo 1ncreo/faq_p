@@ -1,0 +1,9 @@
+Django==5.1.5
+django-redis==5.4.0
+django-ckeditor==6.7.2
+googletrans==4.0.0rc1
+redis==5.2.1
+djangorestframework==3.15.2
+pytest==8.3.4
+pytest-django==4.9.0
+pillow==11.1.0
