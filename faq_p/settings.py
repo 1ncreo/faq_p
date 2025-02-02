@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'faq',
+    'faq_app',
     'ckeditor',
     'rest_framework',
 ]
