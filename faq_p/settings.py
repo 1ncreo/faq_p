@@ -133,3 +133,20 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CKEditor Configuration
+CKEDITOR_UPLOAD_PATH = 'uploads/ckeditor/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+# Media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# CKEditor configurations (optional but recommended)
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
